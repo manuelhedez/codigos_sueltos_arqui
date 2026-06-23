@@ -1,0 +1,31 @@
+module ram(
+    input [2:0] Dir,
+    input EN,
+    input DatoE,
+    output reg [31:0] DatoS);
+
+    //crear memoria 
+    reg[31:0] Mem [0:9];
+
+    //inicializacion 
+    initial 
+        begin 
+            Mem[0]=32'd 255;
+            Mem[1]=32'd 127;
+            Mem[2]=32'd 63;
+            Mem[3]=32'd 31;
+            Mem[4]=32'd 15;
+        end
+    //lectura
+    always @*
+        begin 
+            if(EN)
+                begin
+                    Mem[dir]=DatoE;
+                end
+            else
+                begin
+                    DatoS= Mem[Dir];
+                end
+         end
+endmodule
