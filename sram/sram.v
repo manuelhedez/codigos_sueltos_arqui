@@ -11,7 +11,7 @@ module sram(
     //inicializacion 
     initial 
         begin 
-            $readmemb("Datos.txt", mem);
+             $readmemb("C:/Users/USUARIO/Documents/MANUELHEDEZGITHUB/codigos_sueltos_arqui/sram/Datos.txt", Mem);
         end
     //lectura
     always @*

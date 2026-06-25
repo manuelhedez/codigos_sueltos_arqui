@@ -9,11 +9,7 @@ module Srom(
     //inicializacion 
     initial 
         begin 
-            Mem[0]=32'd 255;
-            Mem[1]=32'd 127;
-            Mem[2]=32'd 63;
-            Mem[3]=32'd 31;
-            Mem[4]=32'd 15;
+            $readmemb("C:/Users/USUARIO/Documents/MANUELHEDEZGITHUB/codigos_sueltos_arqui/sram/Datos.txt", Mem); 
         end
     //lectura
     always @(posedge clk)

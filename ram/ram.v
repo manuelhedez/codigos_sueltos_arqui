@@ -4,24 +4,25 @@ module ram(
     input [31:0] DatoE,
     output reg [31:0] DatoS);
 
-    //crear memoria 
-    reg[31:0] Mem [0:9];
+    // SOLUCIÓN: Agrega este atributo antes del reg para engañar a Quartus
+    (* ramstyle = "logic" *) reg [31:0] Mem [0:4];
 
-    //inicializacion 
+    // inicializacion 
     initial 
         begin 
-            $readmemb("Datos.txt",Mem)
+             $readmemb("C:/Users/USUARIO/Documents/MANUELHEDEZGITHUB/codigos_sueltos_arqui/sram/Datos.txt", Mem);
         end
-    //lectura
+
+    // lectura y escritura
     always @*
         begin 
             if(EN)
                 begin
-                    Mem[Dir]=DatoE[31:0];
+                    Mem[Dir] = DatoE[31:0];
                 end
             else
                 begin
-                    DatoS= Mem[Dir];
+                    DatoS = Mem[Dir];
                 end
          end
 endmodule
