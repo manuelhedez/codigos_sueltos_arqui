@@ -1,11 +1,11 @@
 module ram(
-    input [2:0] Dir,
+    input [4:0] Dir,
     input EN,
     input [31:0] DatoE,
     output reg [31:0] DatoS);
 
     // SOLUCIÓN: Agrega este atributo antes del reg para engañar a Quartus
-    (* ramstyle = "logic" *) reg [31:0] Mem [0:4];
+    (* ramstyle = "logic" *) reg [31:0] Mem [0:31];
 
     // inicializacion 
     initial 
