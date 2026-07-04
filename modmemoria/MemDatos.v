@@ -18,9 +18,9 @@ module MemDatos(
     always @*
         begin 
             case({We,Re})
-                10:Mem[dir]=DatoE;
-                01: DatoS=Mem[Dir];
-                default: datoS=32'b0;
+                2'b10:Mem[Dir]=DatoE;
+                2'b01: DatoS=Mem[Dir];
+                default: DatoS=32'b0;
             endcase
          end
 endmodule

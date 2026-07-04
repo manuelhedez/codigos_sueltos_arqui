@@ -8,6 +8,6 @@ module mux#(
 );
 
 
-
+assign s = sel ? e2 : e1;
 
 endmodule

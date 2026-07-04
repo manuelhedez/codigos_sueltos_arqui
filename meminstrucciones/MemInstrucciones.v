@@ -16,6 +16,6 @@ module MemInstrucciones(
     // lectura y escritura
     always @*
         begin 
-            DatoS={Mem[dir],Mem[dir+1],Mem[dir+2],Mem[dir+3]};
+            DatoS={Mem[Dir],Mem[Dir+1],Mem[Dir+2],Mem[Dir+3]};
          end
 endmodule
