@@ -25,7 +25,7 @@ PC PCVR(
 );
 
 add addpcv(
-    .d1(pc_meminst),
+    .d1(pc_meminst),f
     .d2(32'd4),
     .sl1(add_mux1)
 );
